@@ -9,9 +9,9 @@ class Track {
   draw(ctx) {
     ctx.beginPath();
     ctx.lineWidth = 5;
-    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#FFFFFF";
     ctx.moveTo(this.start.x,this.start.y);
-    ctx.lineTo(this.end.x,this.start.y);
+    ctx.lineTo(this.end.x,this.end.y);
     ctx.stroke();
   }
 }
