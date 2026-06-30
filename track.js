@@ -9,6 +9,6 @@ class Track {
       x = endX,
       y = endY,
     }
-    this.speedLimit = speedLimit
+    this.speedLimit = speedLimit;
   }
 }
