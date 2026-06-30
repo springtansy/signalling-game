@@ -29,4 +29,4 @@ function clamp(value, min, max) {
 }
 
 const tracks = [];
-tracks.push(new Track("T001",100,100,200,100));
+tracks.push(new Track("T001",{x:100,y:100},{x:250,y:100}));
