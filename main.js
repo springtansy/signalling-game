@@ -27,3 +27,6 @@ window.addEventListener("blur", () => {
 function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
 }
+
+const tracks = [];
+tracks.push(new Track("T001",100,100,200,100)
