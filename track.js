@@ -5,4 +5,11 @@ class Track {
     this.end = end;
     this.speedLimit = speedLimit;
   }
+
+  draw(ctx) {
+    ctx.beginPath();
+    ctx.lineWidth = 5;
+    ctx.moveTo(this.start.x,this.start.y);
+    ctx.lineTo(this.end.x,this.start.y);
+    ctx.stroke();
 }
