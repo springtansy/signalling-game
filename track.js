@@ -12,4 +12,5 @@ class Track {
     ctx.moveTo(this.start.x,this.start.y);
     ctx.lineTo(this.end.x,this.start.y);
     ctx.stroke();
+  }
 }
