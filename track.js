@@ -1,14 +1,8 @@
 class Track {
-  constructor(id,startX,startY,endX,endY,speedLimit=15) {
+  constructor(id,start,end,speedLimit=15) {
     this.id = id;
-    this.start = [
-      x = startX,
-      y = startY,
-    ];
-    this.end = [
-      x = endX,
-      y = endY,
-    ];
+    this.start = start;
+    this.end = end;
     this.speedLimit = speedLimit;
   }
 }
