@@ -29,11 +29,11 @@ function clamp(value, min, max) {
 }
 
 const trackNodes = [];
-trackNodes.push(new TrackNode("N001",100,100}));
-trackNodes.push(new TrackNode("N002",250,100}));
+trackNodes.push("N001": new TrackNode("N001",100,100}));
+trackNodes.push("N002": new TrackNode("N002",250,100}));
 
 const tracks = [];
-tracks.push(new Track("T001","N001","N002"));
+tracks.push(new Track("T001",trackNodes["N001"],tracknodes["N002"]));
 
 function update(dt) {
     
