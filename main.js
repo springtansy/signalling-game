@@ -28,8 +28,12 @@ function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
 }
 
+const trackNodes = [];
+trackNodes.push(new TrackNode("N001",100,100}));
+trackNodes.push(new TrackNode("N002",250,100}));
+
 const tracks = [];
-tracks.push(new Track("T001",{x:100,y:100},{x:250,y:100}));
+tracks.push(new Track("T001","N001","N002"));
 
 function update(dt) {
     
