@@ -30,18 +30,23 @@ function clamp(value, min, max) {
 
 const trackNodes = new Map();
 
-trackNodes.set("N001", new TrackNode("N001", 100, 100));
-trackNodes.set("N002", new TrackNode("N002", 250, 100));
+trackNodes.set("N001", new TrackNode("N001", 25, 100));
+trackNodes.set("N002", new TrackNode("N002", 175, 100));
+trackNodes.set("N003", new TrackNode("N003", 275, 140));
+trackNodes.set("N004", new TrackNode("N004", 525, 140));
+trackNodes.set("N005", new TrackNode("N005", 625, 100));
+trackNodes.set("N006", new TrackNode("N006", 775, 100));
+
+
 
 const tracks = [];
 
-tracks.push(
-    new Track(
-        "T001",
-        trackNodes.get("N001"),
-        trackNodes.get("N002")
-    )
-);
+tracks.push(new Track("T001",trackNodes.get("N001"),trackNodes.get("N002")));
+tracks.push(new Track("T002",trackNodes.get("N002"),trackNodes.get("N003")));
+tracks.push(new Track("T003",trackNodes.get("N003"),trackNodes.get("N004")));
+tracks.push(new Track("T004",trackNodes.get("N004"),trackNodes.get("N005")));
+tracks.push(new Track("T005",trackNodes.get("N005"),trackNodes.get("N006")));
+tracks.push(new Track("T006",trackNodes.get("N002"),trackNodes.get("N005")));
 
 function update(dt) {
     
