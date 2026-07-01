@@ -6,7 +6,7 @@ class TrackNode {
     this.connections = [];
   }
   connect(id,node,dir) {
-    this.connections.push({id: id, node: node, dir: dir)});
+    this.connections.push({id: id, node: node, dir: dir});
   }
 }
 
@@ -24,8 +24,8 @@ class Track {
     ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.strokeStyle = "#FFFFFF";
-    ctx.moveTo(this.nodeA.x,this.nodeB.y);
-    ctx.lineTo(this.nodeA.x,this.nodeB.y);
+    ctx.moveTo(this.nodeA.x,this.nodeA.y);
+    ctx.lineTo(this.nodeB.x,this.nodeB.y);
     ctx.stroke();
   }
 }
