@@ -1,8 +1,16 @@
-class Track {
-  constructor(id,start,end,speedLimit=15) {
+class TrackNode {
+  constructor(id,x,y) {
     this.id = id;
-    this.start = start;
-    this.end = end;
+    this.x = x;
+    this.y = y;
+  }
+}
+
+class Track {
+  constructor(id,startNode,endNode,speedLimit=15) {
+    this.id = id;
+    this.startNode = startNode;
+    this.endNode = endNode;
     this.speedLimit = speedLimit;
   }
 
@@ -10,8 +18,8 @@ class Track {
     ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.strokeStyle = "#FFFFFF";
-    ctx.moveTo(this.start.x,this.start.y);
-    ctx.lineTo(this.end.x,this.end.y);
+    ctx.moveTo(this.startNode.x,this.startNode.y);
+    ctx.lineTo(this.endNode.x,this.endNode.y);
     ctx.stroke();
   }
 }

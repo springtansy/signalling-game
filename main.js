@@ -28,8 +28,20 @@ function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
 }
 
+const trackNodes = new Map();
+
+trackNodes.set("N001", new TrackNode("N001", 100, 100));
+trackNodes.set("N002", new TrackNode("N002", 250, 100));
+
 const tracks = [];
-tracks.push(new Track("T001",{x:100,y:100},{x:250,y:100}));
+
+tracks.push(
+    new Track(
+        "T001",
+        trackNodes.get("N001"),
+        trackNodes.get("N002")
+    )
+);
 
 function update(dt) {
     
